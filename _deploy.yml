@@ -21,8 +21,8 @@ rsync:
   default:
     user: rsync
     port: 22
-    host: caladbolg.sparanoid.com
-    dest: /srv/www/dev.sparanoid.com/public_html
+    host: https://amazing-wescoff-f7ade9.netlify.app
+    dest: _site/
     # Extra rsync parameters
     # I use `--exclude` here to prevent additional files from being deleted on
     # the server (rsync --delete), these files and directories are available on
@@ -31,8 +31,8 @@ rsync:
   prod:
     user: sparanoid
     port: 22
-    host: caladbolg.sparanoid.com
-    dest: /srv/www/sparanoid.com/public_html
+    host: https://amazing-wescoff-f7ade9.netlify.app
+    dest: _site/
     # Extra rsync parameters
     # I use `--rsync-path` here to run `rsync` with sudo permission.
     params: --rsync-path="sudo rsync" --exclude=lab --exclude=s3_website.yml
